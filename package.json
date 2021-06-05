@@ -2,5 +2,16 @@
   "name": "my-best-anime",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "author": {
+    "name": "Rodrigo Vaz",
+    "email": "rodrigodp2014@gmail.com",
+    "url": "https://github.com/drigovz"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "^14.16.0",
+    "npm": "You must run Yarn on this project!",
+    "yarn": "^1.22.10"
+  }
 }
