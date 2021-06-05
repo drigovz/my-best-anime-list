@@ -8,6 +8,9 @@
     "email": "rodrigodp2014@gmail.com",
     "url": "https://github.com/drigovz"
   },
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts"
+  },
   "engineStrict": true,
   "engines": {
     "node": "^14.16.0",
