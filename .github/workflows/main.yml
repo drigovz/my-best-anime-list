@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup nodejs v14
-      - uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: 14.x
-      - run: npm --version
+        run: npm --version
+
       # - run: node --version
 
       # # - name: check node and npm versions
