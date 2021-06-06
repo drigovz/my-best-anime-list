@@ -21,11 +21,9 @@ jobs:
           node --version
 
       - name: setup snyk
-        uses: actions/setup-node@v2.1.5
-      - run: |
+        run: |
           npm install -g snyk
           snyk auth
 
       - name: run scan for vulnerabilities
-        uses: actions/setup-node@v2.1.5
         run: snyk test
