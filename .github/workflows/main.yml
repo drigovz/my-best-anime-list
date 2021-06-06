@@ -16,9 +16,7 @@ jobs:
 
       - name: check node and npm versions
         run: npm --version
-        # run: node --version
-
-      # - run: node --version
+          node --version
 
       # # - name: check node and npm versions
       # - uses: actions/setup-node@v2.1.5
