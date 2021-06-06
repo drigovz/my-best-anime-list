@@ -13,17 +13,19 @@ jobs:
       - uses: actions/setup-node@v2.1.5
         with:
           node-version: 14.x
-
-      # - name: check node and npm versions
-      - uses: actions/setup-node@v2.1.5
       - run: npm --version
       - run: node --version
 
-      # - name: setup snyk
-      - uses: actions/setup-node@v2.1.5
-      - run: npm install -g snyk
-      - run: snyk auth
+      # # - name: check node and npm versions
+      # - uses: actions/setup-node@v2.1.5
+      # - run: npm --version
+      # - run: node --version
 
-      # - name: run scan for vulnerabilities
-      - uses: actions/setup-node@v2.1.5
-        run: snyk test
+      # # - name: setup snyk
+      # - uses: actions/setup-node@v2.1.5
+      # - run: npm install -g snyk
+      # - run: snyk auth
+
+      # # - name: run scan for vulnerabilities
+      # - uses: actions/setup-node@v2.1.5
+      #   run: snyk test
