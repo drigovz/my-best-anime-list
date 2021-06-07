@@ -31,7 +31,7 @@ jobs:
           snyk_secret: ${{ secrets.SNYK_TOKEN }}
 
       - name: install dependences of application
-        run: yarn install
+        run: yarn install --prod
 
       - name: scan for vulnerabilities
         run: snyk test
