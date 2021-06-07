@@ -24,7 +24,9 @@ jobs:
           npm install -g snyk
 
       - name: auth on snyk
-        run: snyk auth
+        env:
+          snyk_key: ${{secrets.SNYK_TOKEN}}
+        run: snyk auth $snyk_key
 
       - name: run scan for vulnerabilities
         run: snyk test
