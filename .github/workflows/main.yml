@@ -14,10 +14,10 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: check node and npm versions
-        run: |
-          npm --version
-          node --version
+      #- name: check node and npm versions
+       # run: |
+        #  npm --version
+         # node --version
 
       - name: setup snyk
         run: |
@@ -28,5 +28,5 @@ jobs:
           SUPER_SECRET: ${{ secrets.SNYK_TOKEN }}
         run: echo "$SUPER_SECRET"
                 
-      - name: run scan for vulnerabilities
-          snyk test
+     # - name: run scan for vulnerabilities
+     #    snyk test
