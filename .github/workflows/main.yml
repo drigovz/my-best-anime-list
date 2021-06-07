@@ -24,11 +24,15 @@ jobs:
           npm install -g snyk
 
       - name: auth on snyk
-        uses: snyk/actions/node@master
-
-      - name: run scan for vulnerabilities
+        # uses: snyk/actions/node@master
+        #env:
+        # SNYK_TOKEN: ${{ env.SNYK_TOKEN }}
+        #run: |
+        # snyk auth $SNYK_TOKEN
         env:
-          SNYK_TOKEN: ${{ env.SNYK_TOKEN }}
+          SUPER_SECRET: ${{ secrets.SNYK_TOKEN }}
         run: |
-          snyk auth $SNYK_TOKEN
+          echo "$SUPER_SECRET"
+                
+      - name: run scan for vulnerabilities
           snyk test
