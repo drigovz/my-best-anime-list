@@ -20,7 +20,7 @@ jobs:
           node --version
 
       - name: setup snyk
-      - shell: bash
+        shell: bash
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
