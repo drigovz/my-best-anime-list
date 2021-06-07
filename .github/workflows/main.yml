@@ -25,12 +25,10 @@ jobs:
 
       - name: auth on snyk
         uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ develop.SNYK_TOKEN }}
 
       - name: run scan for vulnerabilities
         env:
-          SNYK_TOKEN: ${{ develop.SNYK_TOKEN }}
+          SNYK_TOKEN: ${{ env.SNYK_TOKEN }}
         run: |
           snyk auth $SNYK_TOKEN
           snyk test
