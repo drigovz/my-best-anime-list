@@ -36,9 +36,12 @@ jobs:
         run: yarn install --prod
 
       - name: scan for vulnerabilities
-        uses: snyk/actions/node@master
-        # run: snyk wizard
-        env:
-          snyk_secret: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: monitor
+        run: yarn snyk
+
+      # - name: scan for vulnerabilities
+      #   uses: snyk/actions/node@master
+      #   # run: snyk wizard
+      #   env:
+      #     snyk_secret: ${{ secrets.SNYK_TOKEN }}
+      #   with:
+      #     command: monitor
