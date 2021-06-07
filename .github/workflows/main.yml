@@ -21,7 +21,7 @@ jobs:
 
       - name: setup snyk
         shell: bash
-        env:
+        with:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           echo $SNYK_TOKEN
