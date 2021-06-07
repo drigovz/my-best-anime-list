@@ -19,13 +19,18 @@ jobs:
           npm --version
           node --version
 
-      - name: setup snyk
-        run: npm install -g snyk
+      - name: setup snyk and yarn
+        run: |
+          npm install -g snyk
+          npm install -g yarn
 
       - name: auth on snyk
+        run: snyk auth $snyk_secret
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk auth ${ SNYK_TOKEN }
+          snyk_secret: ${{ secrets.SNYK_TOKEN }}
+
+      - name: install dependences of application
+        run: yarn install
 
       - name: scan for vulnerabilities
         run: snyk test
