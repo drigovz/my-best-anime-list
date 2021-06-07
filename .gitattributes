@@ -167,10 +167,10 @@ TODO              text
 .gitconfig        text
 .htaccess         text
 *.lock            text -diff
-package.json      text eol=lf
-package-lock.json text -diff
+# package.json    text eol=lf
+# package-lock.json text -diff
 pnpm-lock.yaml    text eol=lf -diff
-yarn.lock         text -diff
+# yarn.lock       text -diff
 *.toml            text
 *.yaml            text
 *.yml             text
