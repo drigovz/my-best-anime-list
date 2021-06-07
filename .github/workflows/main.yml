@@ -26,7 +26,7 @@ jobs:
       - name: auth on snyk
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk auth ${SNYK_TOKEN}
+        run: snyk auth ${{secrets.SNYK_TOKEN}}
 
       - name: run scan for vulnerabilities
         run: snyk test
