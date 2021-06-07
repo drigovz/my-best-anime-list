@@ -35,4 +35,4 @@ jobs:
         # run: npm install --only=prod
 
       - name: scan for vulnerabilities
-        run: snyk test
+        run: snyk wizard
