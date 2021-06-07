@@ -25,14 +25,13 @@ jobs:
           npm install -g yarn
           yarn --version
 
-      - name: auth on snyk
-        run: snyk auth $snyk_secret
-        env:
-          snyk_secret: ${{ secrets.SNYK_TOKEN }}
-
+      # - name: auth on snyk
+      #   run: snyk auth $snyk_secret
+      #   env:
+      #     snyk_secret: ${{ secrets.SNYK_TOKEN }}
       - name: install dependences of application
-        #run: yarn install --prod
-        run: npm install --only=prod
+        run: yarn install --prod
+        # run: npm install --only=prod
 
-      - name: scan for vulnerabilities
-        run: snyk test
+      # - name: scan for vulnerabilities
+      #   run: snyk test
