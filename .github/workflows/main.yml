@@ -21,12 +21,12 @@ jobs:
 
       - name: setup snyk
         shell: bash
-        # env:
-        #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          echo ${SNYK_TOKEN:0:4}
+          echo $SNYK_TOKEN
           npm install -g snyk
-          snyk auth ${{ secrets.SNYK_TOKEN }}
+          snyk auth $SNYK_TOKEN
 
       - name: run scan for vulnerabilities
         run: snyk test
