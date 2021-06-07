@@ -21,9 +21,10 @@ jobs:
 
       - name: setup snyk
         shell: bash
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        # env:
+        #   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
+          echo ${SNYK_TOKEN:0:4}
           npm install -g snyk
           snyk auth ${{ secrets.SNYK_TOKEN }}
 
