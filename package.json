@@ -22,10 +22,11 @@
     ]
   },
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
-    "snyk": "snyk test"
+    "snyk": "snyk test",
+    "snyk-monitor": "snyk monitor"
   },
   "engineStrict": true,
   "engines": {
@@ -45,6 +46,7 @@
     "husky": "4",
     "lint-staged": "^11.0.0",
     "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.3.2"
   }
 }

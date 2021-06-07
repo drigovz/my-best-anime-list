@@ -32,16 +32,8 @@ jobs:
         env:
           snyk_secret: ${{ secrets.SNYK_TOKEN }}
 
-      - name: install dependences of application
+      - name: install dependencies of application
         run: yarn install --prod
 
       - name: scan for vulnerabilities
         run: yarn snyk
-
-      # - name: scan for vulnerabilities
-      #   uses: snyk/actions/node@master
-      #   # run: snyk wizard
-      #   env:
-      #     snyk_secret: ${{ secrets.SNYK_TOKEN }}
-      #   with:
-      #     command: monitor
